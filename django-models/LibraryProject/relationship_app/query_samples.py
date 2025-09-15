@@ -7,8 +7,9 @@ lib = Library(name="City Library", books=[])
 librarian = Librarian(name="Mohammed", library=lib)
 
 #Query all books by a specific author
-author_name = author1.name
+author_name = "J. K. Rowling"
 author = Author.objects.get(name=author_name)
+author_books = Book.objects.filter(author=author)
 
 #List all books in a library
 library_name = lib.name
