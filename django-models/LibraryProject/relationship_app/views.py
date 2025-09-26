@@ -16,11 +16,11 @@ def get_all_books(request):
 
     return render(request, "list_books.html", context)
 
-class LibListView(DetailView):
+class LibDetailView(DetailView):
     model = Library
     template_name = "library_detail.html"
     slug_field = 'name'
-    slug_url_kwarg = 'library_name'
+    slug_url_kwarg = 'pk'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
