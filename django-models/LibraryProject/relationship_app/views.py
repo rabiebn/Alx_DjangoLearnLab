@@ -10,11 +10,11 @@ def get_all_books(request):
     Function-based View that lists all books stored in the DB.
     """
     books = Book.objects.all()
-    template = loader.get_template("list_books.html")
+    template = loader.get_template("relationship_app/list_books.html")
     context = {"books": books}
     #output = "\n".join([f"{book.title} - {book.author.name}" for book in books])
 
-    return render(request, "list_books.html", context)
+    return render(request, "relationship_app/list_books.html", context)
 
 class LibDetailView(DetailView):
     model = Library
