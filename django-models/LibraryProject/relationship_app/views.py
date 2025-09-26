@@ -18,7 +18,7 @@ def get_all_books(request):
 
 class LibDetailView(DetailView):
     model = Library
-    template_name = "library_detail.html"
+    template_name = "relationship_app/library_detail.html"
     slug_field = 'name'
     slug_url_kwarg = 'pk'
 
