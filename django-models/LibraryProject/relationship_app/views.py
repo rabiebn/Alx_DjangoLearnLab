@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.generic import DetailView
 
-from .models import Author, Book, Library, Librarian
+from .models import Library, Book
 
 def get_all_books(request):
     """
