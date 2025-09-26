@@ -5,7 +5,7 @@ from django.views.generic.detail import DetailView
 
 from .models import Library, Book
 
-def get_all_books(request):
+def list_books(request):
     """
     Function-based View that lists all books stored in the DB.
     """
@@ -16,7 +16,7 @@ def get_all_books(request):
 
     return render(request, "relationship_app/list_books.html", context)
 
-class LibDetailView(DetailView):
+class LibraryDetailView(DetailView):
     model = Library
     template_name = "relationship_app/library_detail.html"
     slug_field = 'name'
